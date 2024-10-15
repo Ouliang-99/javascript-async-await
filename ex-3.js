@@ -32,4 +32,14 @@ let getJohnOrders = () => {
   });
 };
 
-// Start coding here
+getJohnProfile()
+  .then((johnProfile) => {
+    console.log(johnProfile);
+    return getJohnOrders();
+  })
+  .then((johnOrders) => {
+    console.log(johnOrders);
+  })
+  .catch((error) => {
+    console.error("Error:", error);
+  });

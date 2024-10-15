@@ -12,4 +12,11 @@ let getJohnProfile = () => {
   });
 };
 
-// Start coding here
+getJohnProfile()
+  .then((profiles) => {
+    console.log(profiles);
+  })
+  .catch((error) => {
+    console.log(`errorCode : ${error.errorCode}`);
+    console.log(`message: ${error.message}`);
+  });
